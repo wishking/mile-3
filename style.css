@@ -1,0 +1,55 @@
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color:aliceblue
+  }
+  
+  h1 {
+    animation: fadeIn 1s;
+  }
+  
+  form {
+    width: 300px;
+    margin: 0 auto;
+    animation: fadeIn 1s;
+    padding: 80px;
+    border:5px solid;
+} 
+  label {
+    display: block;
+    text-align: left;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #resumePreview {
+    display: none;
+    width: 500px;
+    margin: 0 auto;
+    animation: fadeIn 1s;
+  }
+  
+  #resumePreview p {
+    text-align: left;
+  }
+  
+  #downloadButton {
+    margin-top: 20px;
+  }

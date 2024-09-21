@@ -1,0 +1,31 @@
+"use strict";
+var _a, _b;
+(_a = document.getElementById("resumeForm")) === null || _a === void 0 ? void 0 : _a.addEventListener("submit", (event) => {
+    var _a, _b, _c, _d, _e, _f, _g, _h;
+    event.preventDefault();
+    const name = (_a = document.getElementById("name")) === null || _a === void 0 ? void 0 : _a.value;
+    const education = (_b = document.getElementById("education")) === null || _b === void 0 ? void 0 : _b.value;
+    const email = (_c = document.getElementById("email")) === null || _c === void 0 ? void 0 : _c.value;
+    const phone = (_d = document.getElementById("phone")) === null || _d === void 0 ? void 0 : _d.value;
+    const summary = (_e = document.getElementById("summary")) === null || _e === void 0 ? void 0 : _e.value;
+    const skills = (_f = document.getElementById("skills")) === null || _f === void 0 ? void 0 : _f.value;
+    const jobs = (_g = document.getElementById("jobs")) === null || _g === void 0 ? void 0 : _g.value;
+    const milestone = (_h = document.getElementById("milestone")) === null || _h === void 0 ? void 0 : _h.value;
+    document.getElementById("previewName").textContent = name;
+    document.getElementById("previewEducation").textContent = education;
+    document.getElementById("previewEmail").textContent = email;
+    document.getElementById("previewPhone").textContent = phone;
+    document.getElementById("previewSummary").textContent = summary;
+    document.getElementById("previewSkills").textContent = skills;
+    document.getElementById("previewJobs").textContent = jobs;
+    document.getElementById("previewMilestone").textContent = milestone;
+    document.getElementById("resumeForm").style.display = "none";
+    document.getElementById("resumePreview").style.display = "block";
+});
+(_b = document.getElementById("downloadButton")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", () => {
+    const resumeContent = document.getElementById("resumePreview").innerHTML;
+    const link = document.createElement("a");
+    link.href = "data:text/html;charset=utf-8," + encodeURIComponent(resumeContent);
+    link.download = "resume.html";
+    link.click();
+});

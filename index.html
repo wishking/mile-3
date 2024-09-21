@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <form id="resumeForm">
+    <h1>Resume Builder</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <label for="education">Education:</label>
+    <input type="text" id="education" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" required>
+    <label for="summary">Summary:</label>
+    <textarea id="summary" required></textarea>
+    <label for="skills">Skills:</label>
+    <textarea id="skills" required></textarea>
+    <label for="jobs">Jobs:</label>
+    <textarea id="jobs" required></textarea>
+    <label for="milestone">Milestone:</label>
+    <textarea id="milestone" required></textarea>
+    <button type="submit" id="submitButton">Generate Resume</button>
+  </form>
+
+  <div id="resumePreview">
+    <h2 id="previewName"></h2>
+    <p><b>Education:</b> <span id="previewEducation"></span></p>
+    <p><b>Email:</b> <span id="previewEmail"></span></p>
+    <p><b>Phone:</b> <span id="previewPhone"></span></p>
+    <p><b>Summary:</b> <span id="previewSummary"></span></p>
+    <p><b>Skills:</b> <span id="previewSkills"></span></p>
+    <p><b>Jobs:</b> <span id="previewJobs"></span></p>
+    <p><b>Milestone:</b> <span id="previewMilestone"></span></p>
+    <button id="downloadButton">Download Resume</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
